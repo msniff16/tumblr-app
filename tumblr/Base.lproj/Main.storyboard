@@ -53,7 +53,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="compose_button"/>
                                         <connections>
-                                            <action selector="onTabPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qpk-fO-bfn"/>
+                                            <segue destination="ljo-5j-dad" kind="modal" id="1Y4-aH-pUc"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -69,6 +69,7 @@
                     </view>
                     <connections>
                         <outlet property="contentView" destination="SEp-G0-eKI" id="uAw-DL-MdL"/>
+                        <outlet property="homeButton" destination="RRQ-xT-Drf" id="33N-Ev-sSc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -161,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vgz-g8-0Vk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="263" y="1216"/>
+            <point key="canvasLocation" x="270" y="1216"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="iLM-YL-ItC">
