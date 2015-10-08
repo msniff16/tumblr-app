@@ -54,23 +54,33 @@ class TabBarViewController: UIViewController {
         
         // tapped home view
         if(tabPressed.tag == 100) {
+            addChildViewController(homeVC)
             contentView.addSubview(homeVC.view)
+            homeVC.didMoveToParentViewController(self)
             currentlySelectedView = homeVC
         }
         else if(tabPressed.tag == 200) {
+            addChildViewController(searchVC)
             contentView.addSubview(searchVC.view)
+            searchVC.didMoveToParentViewController(self)
             currentlySelectedView = searchVC
         }
         else if(tabPressed.tag == 300) {
+            addChildViewController(composeVC)
             contentView.addSubview(composeVC.view)
+            composeVC.didMoveToParentViewController(self)
             currentlySelectedView = composeVC
         }
         else if(tabPressed.tag == 400) {
+            addChildViewController(accountVC)
             contentView.addSubview(accountVC.view)
+            accountVC.didMoveToParentViewController(self)
             currentlySelectedView = accountVC
         }
         else if(tabPressed.tag == 500) {
+            addChildViewController(trendingVC)
             contentView.addSubview(trendingVC.view)
+            trendingVC.didMoveToParentViewController(self)
             currentlySelectedView = trendingVC
         }
   
