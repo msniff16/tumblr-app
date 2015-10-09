@@ -18,6 +18,7 @@
 		8D66810E1BC6D26E004F9A16 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D66810D1BC6D26E004F9A16 /* ComposeViewController.swift */; };
 		8D6681101BC6D276004F9A16 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D66810F1BC6D276004F9A16 /* AccountViewController.swift */; };
 		8D6681121BC6D2A6004F9A16 /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6681111BC6D2A6004F9A16 /* TrendingViewController.swift */; };
+		8DBF649A1BC824D200CA886E /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF64991BC824D200CA886E /* LoginPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		8D66810D1BC6D26E004F9A16 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		8D66810F1BC6D276004F9A16 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		8D6681111BC6D2A6004F9A16 /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		8DBF64991BC824D200CA886E /* LoginPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				8D66810D1BC6D26E004F9A16 /* ComposeViewController.swift */,
 				8D66810F1BC6D276004F9A16 /* AccountViewController.swift */,
 				8D6681111BC6D2A6004F9A16 /* TrendingViewController.swift */,
+				8DBF64991BC824D200CA886E /* LoginPageViewController.swift */,
 				8D6680DE1BC6CE56004F9A16 /* Main.storyboard */,
 				8D6681081BC6CE71004F9A16 /* Supporting Files */,
 			);
@@ -279,6 +282,7 @@
 				8D6680DD1BC6CE56004F9A16 /* TabBarViewController.swift in Sources */,
 				8D6681101BC6D276004F9A16 /* AccountViewController.swift in Sources */,
 				8D6680DB1BC6CE56004F9A16 /* AppDelegate.swift in Sources */,
+				8DBF649A1BC824D200CA886E /* LoginPageViewController.swift in Sources */,
 				8D66810C1BC6D265004F9A16 /* SearchViewController.swift in Sources */,
 				8D66810A1BC6D25A004F9A16 /* HomeViewController.swift in Sources */,
 			);
@@ -499,6 +503,7 @@
 				8D6681011BC6CE56004F9A16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D6681021BC6CE56004F9A16 /* Build configuration list for PBXNativeTarget "tumblrTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +512,7 @@
 				8D6681041BC6CE56004F9A16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D6681051BC6CE56004F9A16 /* Build configuration list for PBXNativeTarget "tumblrUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +521,7 @@
 				8D6681071BC6CE56004F9A16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

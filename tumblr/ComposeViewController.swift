@@ -16,6 +16,9 @@ class ComposeViewController: UIViewController {
 
     }
 
-    
+    // close modal
+    @IBAction func onNevermind(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
 }

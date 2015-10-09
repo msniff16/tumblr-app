@@ -17,6 +17,9 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     var accountVC: UIViewController!
     var trendingVC: UIViewController!
     
+    // bubble
+    @IBOutlet weak var exploreBubble: UIImageView!
+    
     // all vc's popped in here
     @IBOutlet weak var contentView: UIView!
     
@@ -24,6 +27,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     var currentlySelectedView: UIViewController?
     var currentlySelectedButton: UIButton?
     var isPresenting: Bool = true
+    var bobValue: CGFloat = 10.0
     @IBOutlet weak var homeButton: UIButton!
 
     required init(coder aDecoder: NSCoder) {
@@ -53,6 +57,23 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
         currentlySelectedView = homeVC
         currentlySelectedButton = homeButton
         homeButton.setImage(UIImage(named: "home_selected_icon"), forState: .Normal)
+        
+        // animate the pop up to bob
+        bobUpAndDown(bobValue)
+
+        
+    }
+    
+    // bobbing animation
+    func bobUpAndDown(yOffset: CGFloat) {
+        
+        // animate the pop up to bob
+        UIView.animateWithDuration(1.0, delay: 0.1, options: .CurveEaseOut, animations: {
+            self.exploreBubble.frame = CGRectMake(self.exploreBubble.frame.origin.x, self.exploreBubble.frame.origin.y + self.bobValue, self.exploreBubble.frame.size.width, self.exploreBubble.frame.size.height)
+            }, completion: { finished in
+                self.bobValue = -1 * self.bobValue
+                self.bobUpAndDown(self.bobValue)
+        })
         
     }
     
@@ -84,6 +105,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
             homeVC.didMoveToParentViewController(self)
             currentlySelectedView = homeVC
             tabPressed.setImage(UIImage(named: "home_selected_icon"), forState: .Normal)
+            exploreBubble.hidden = false
         }
         else if(tabPressed.tag == 200) {
             addChildViewController(searchVC)
@@ -91,6 +113,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
             searchVC.didMoveToParentViewController(self)
             tabPressed.setImage(UIImage(named: "search_selected_icon"), forState: .Normal)
             currentlySelectedView = searchVC
+            exploreBubble.hidden = true
         }
         else if(tabPressed.tag == 300) {
             addChildViewController(composeVC)
@@ -98,6 +121,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
             composeVC.didMoveToParentViewController(self)
             tabPressed.setImage(UIImage(named: "compose_selected_icon"), forState: .Normal)
             currentlySelectedView = composeVC
+            exploreBubble.hidden = true
         }
         else if(tabPressed.tag == 400) {
             addChildViewController(accountVC)
@@ -105,6 +129,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
             accountVC.didMoveToParentViewController(self)
             tabPressed.setImage(UIImage(named: "account_selected_icon"), forState: .Normal)
             currentlySelectedView = accountVC
+            exploreBubble.hidden = false
         }
         else if(tabPressed.tag == 500) {
             addChildViewController(trendingVC)
@@ -112,6 +137,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
             trendingVC.didMoveToParentViewController(self)
             tabPressed.setImage(UIImage(named: "trending_selected_icon"), forState: .Normal)
             currentlySelectedView = trendingVC
+            exploreBubble.hidden = false
         }
   
         
